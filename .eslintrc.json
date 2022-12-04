@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "env": {
+    "worker": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./",
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-tsdoc"
+  ],
+  "extends": [
+    "google",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "space-in-parens": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing" : [
+      "error",
+      "always"
+    ],
+    "padded-blocks": [
+      "error",
+      {
+        "classes": "always"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    "brace-style": [
+      "error",
+      "stroustrup"
+    ],
+    "no-console": "warn",
+    "tsdoc/syntax": "warn",
+    "valid-jsdoc": "off",
+    "indent": [ "error", 2 ]
+  }
+}
+
