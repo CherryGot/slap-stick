@@ -4,7 +4,7 @@
   "description": "A JS library for an adaptive and smart sticky element positioning.",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint src/**/*.ts test/**/*.js",
     "build": "webpack",
     "watch": "webpack --watch --mode=development"
   },

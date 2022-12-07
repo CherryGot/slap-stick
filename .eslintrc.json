@@ -47,7 +47,36 @@
     "no-console": "warn",
     "tsdoc/syntax": "warn",
     "valid-jsdoc": "off",
-    "indent": [ "error", 2 ]
-  }
+    "indent": [
+      "error",
+      2
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "test/**/*.js",
+        "test/**/*.ts"
+      ],
+      "rules": {
+        "tsdoc/syntax": "off",
+        "require-jsdoc": "off"
+      }
+    }
+  ]
 }
 
