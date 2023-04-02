@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "A JS library for an adaptive and smart sticky element positioning.",
   "scripts": {
-    "test": "jest",
-    "lint": "eslint src/**/*.ts test/**/*.js",
+    "test": "jest --verbose",
+    "lint": "eslint src/**/*.ts test/**/*.js test/**/*.ts",
     "build": "webpack",
     "watch": "webpack --watch --mode=development"
   },

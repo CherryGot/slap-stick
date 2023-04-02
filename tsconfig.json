@@ -4,6 +4,6 @@
     "module": "CommonJS",
     "noImplicitAny": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"],
 }
