@@ -1,7 +1,20 @@
+/**
+ * Wraps up all the miscellaneous logic so that they can be independetly tested.
+ */
 class Utils {
 
-  private constructor() {}
+  /**
+   * Don't want to instantiate the Utils object.
+   */
+  private constructor() {} // eslint-disable-line @typescript-eslint/no-empty-function
 
+  /**
+   * Takes in an HTMLElement, crawls up the DOM tree recursively to find the parent node that is scrollable. If no such
+   * parent is found, it returns document body.
+   *
+   * @param element - The input HTMLElement.
+   * @returns HTMLElement The parent node that is scrollable.
+   */
   public static findNearestScrollParent( element: HTMLElement ): HTMLElement {
     if ( !element || !element.parentElement ) {
       return document.scrollingElement as HTMLElement || document.body;
