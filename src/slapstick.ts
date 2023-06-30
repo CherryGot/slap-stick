@@ -16,6 +16,10 @@ class SlapStick {
     if ( !htmlElement ) {
       throw new ReferenceError( 'Can\'t find a DOM element with the given selector' );
     }
+
+    if ( typeof options === 'undefined' ) {
+      options = {};
+    }
   }
 
   public destroy() {
