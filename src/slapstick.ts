@@ -1,7 +1,12 @@
+import Sticker from './sticker';
+import StickyOptions from './sticky-options';
+
 /**
  * Creating a new class called SlapStick. Exposed to end-users as public API.
  */
 class SlapStick {
+
+  private sticker: Sticker;
 
   /**
    * Initializes the SlapStick class. Takes in the CSS selector to locate the element (also called the sticker) and
@@ -26,6 +31,18 @@ class SlapStick {
 
     if ( typeof options === 'undefined' ) {
       options = {};
+    }
+
+    const stickerOptions = new StickyOptions( options );
+    this.sticker = new Sticker( htmlElement as HTMLElement, stickerOptions );
+  }
+
+  /**
+   * Redraws the sticker after it has been destroyed.
+   */
+  public redraw() {
+    if ( this.sticker.isDestroyed ) {
+      this.sticker.init();
     }
   }
 
