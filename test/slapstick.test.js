@@ -22,8 +22,14 @@ describe( testSuit, () => {
   testName = 'Html element should be positioned sticky on successful initalization.';
   test( testName, testSuccessfulInitialization );
 
+  // TODO: Test case for checking values of `top` when scrolled all the way up OR down with options provided.
+  // TODO: Test case for checking if the proper event listeners have been hooked.
+
   testName = 'Html element should be positioned back to what it was after destruction.';
   test( testName, testSuccessfulDestruction );
+
+  // TODO: Test case for checking value of `top` returned to normal after destruction.
+  // TODO: Test case for checking if the event listeners hooked have been removed.
 } );
 
 function testEmptyConstructorCall() {
