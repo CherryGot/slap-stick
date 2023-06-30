@@ -3,6 +3,13 @@
  */
 class SlapStick {
 
+  /**
+   * Initializes the SlapStick class. Takes in the CSS selector to locate the element (also called the sticker) and
+   * set of options to take into account.
+   *
+   * @param selector - A CSS selector string.
+   * @param options - A key-value pair for configuring the sticker.
+   */
   public constructor( selector: string, options?: Record<string, number | string> ) {
     if ( typeof selector !== 'string' ) {
       throw new TypeError( '"selector" should be of the string type.' );
@@ -22,6 +29,9 @@ class SlapStick {
     }
   }
 
+  /**
+   * Brings back the stickers back to how they were before initialization in terms of their CSS styles.
+   */
   public destroy() {
     this.sticker.destroy();
   }
