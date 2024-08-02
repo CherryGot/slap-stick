@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .sidebar {
+        position: relative;
+        min-width: 300px;
+      }
+
+      .sidebar__inner {
+        border: 4px dashed red;
+        background-color: antiquewhite;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 300px auto;
+        border: 4px dashed blue;
+        background-color: aliceblue;
+      }
+
+      .h-100 {
+        height: 100%;
+      }
+
+      .container-2,
+      .container-3 {
+        margin: 96px 32px;
+        max-height: 500px;
+        overflow: auto;
+      }
+
+      .container-3 .sidebar__inner {
+        height: 800px;
+      }
+
+      .content {
+        width: 100%;
+        border: 4px dashed green;
+        background-color: azure;
+      }
+
+      .content-1 {
+        height: 3000px;
+      }
+
+      .content-2 {
+        height: 3000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container-1">
+      <div class="sidebar">
+        <div class="sidebar__inner h-100">
+          This is sidebar
+        </div>
+      </div>
+      <div class="content content-1">
+        <div>
+
+          <div class="container container-2">
+            <div class="sidebar">
+              <div class="sidebar__inner">
+                This is sidebar
+              </div>
+            </div>
+            <div class="content content-2">
+              <div>
+                This is content
+              </div>
+            </div>
+          </div>
+
+          <div class="container-3">
+            <div style="width: 100%">
+              My Header
+              <script>
+                for( var i = 0; i < 4; i += 1 ) {
+                  document.write( "<p>Line: " + i + '</p>' );
+                }
+              </script>
+            </div>
+
+            <div class="container">
+              <div class="sidebar">
+                <div class="sidebar__inner">
+                  <script>
+                    for( var i = 0; i < 20; i += 1 ) {
+                      document.write( "<p>Line: " + i + '</p>' );
+                    }
+                  </script>
+                </div>
+              </div>
+              <div class="content content-2">
+                <div>
+                  This is content
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 100%">
+              My Footer
+              <script>
+                for( var i = 0; i < 4; i += 1 ) {
+                  document.write( "<p>Line: " + i + '</p>' );
+                }
+              </script>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../dist/slapstick.js"></script>
+  <script>
+    const sidebar2 = new SlapStick( '.container-2 .sidebar__inner' );
+    const sidebar3 = new SlapStick( '.container-3 .sidebar__inner', {
+      top: 30,
+      bottom: 100,
+    } );
+  </script>
+</html>
